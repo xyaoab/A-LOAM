@@ -12,11 +12,11 @@
     <param name="mapping_line_resolution" type="double" value="0.4"/>
     <param name="mapping_plane_resolution" type="double" value="0.8"/>
 
-    <node pkg="aloam_velodyne" type="ascanRegistration" name="ascanRegistration" output="screen" />
+    <node pkg="aloam_velodyne" type="ascanRegistration" name="ascanRegistration" output="log" />
 
-    <node pkg="aloam_velodyne" type="alaserOdometry" name="alaserOdometry" output="screen" />
+    <node pkg="aloam_velodyne" type="alaserOdometry" name="alaserOdometry" output="log" />
 
-    <node pkg="aloam_velodyne" type="alaserMapping" name="alaserMapping" output="screen" />
+    <node pkg="aloam_velodyne" type="alaserMapping" name="alaserMapping" output="log" />
 
     <arg name="rviz" default="false" />
     <group if="$(arg rviz)">
